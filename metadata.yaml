@@ -1,5 +1,5 @@
-name: helloworld # 这是你的插件的唯一识别名。
-desc: 这是 AstrBot 的默认插件，支持关键词回复。 # 插件简短描述
-version: v1.1.1 # 插件版本号。格式：v1.1.1 或者 v1.1
+name: astorbot_plugin_sleep # 这是你的插件的唯一识别名。
+desc: 夜间BOT自动进入睡眠模式。 # 插件简短描述
+version: v1.0.0 # 插件版本号。格式：v1.1.1 或者 v1.1
 author: Zhan_Kong # 作者
 repo: https://github.com/zhanwuzhijing/astrbot_plugin_sleep # 插件的仓库地址
