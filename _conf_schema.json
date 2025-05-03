@@ -17,7 +17,7 @@
     "hint": "例如: 07:00",
     "default": "07:00"
   },
-  "max_wake_delay_minutes": { 
+  "max_wake_delay_minutes": {
     "description": "【起床延迟】起床后发送消息的最大随机延迟时间（分钟）",
     "type": "int",
     "hint": "将在 0 到此值分钟内随机延迟后发送起床消息。设为 0 则立即发送。",
@@ -48,10 +48,10 @@
     "hint": "留空则不发送/记录",
     "default": "我起床啦！新的一天开始了！💪"
   },
-  "sleeping_reply": {
-    "description": "【睡眠期间回复】机器人在睡眠期间对受影响会话的固定回复",
+  "sleeping_reply": { 
+    "description": "【睡眠期间回复】当用户尝试与LLM交互时的固定回复",
     "type": "string",
-    "hint": "留空则不回复，但仍会阻止LLM等。",
+    "hint": "仅当用户@机器人、使用唤醒词或在私聊中发消息时回复。留空则不回复。",
     "default": "我现在正在睡觉 Zzzzz... 有什么事等我醒来再说吧~"
   }
 }
