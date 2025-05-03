@@ -2,7 +2,7 @@
   "enable_plugin": {
     "description": "是否启用睡眠插件",
     "type": "bool",
-    "hint": "取消勾选将完全禁用此插件的功能，包括时间和消息检查。",
+    "hint": "取消勾选将完全禁用此插件的功能。",
     "default": true
   },
   "sleep_time": {
@@ -17,43 +17,41 @@
     "hint": "例如: 07:00",
     "default": "07:00"
   },
-  "max_wake_delay_minutes": {
-    "description": "起床后发送消息的最大随机延迟时间（分钟）",
+  "max_wake_delay_minutes": { 
+    "description": "【起床延迟】起床后发送消息的最大随机延迟时间（分钟）",
     "type": "int",
     "hint": "将在 0 到此值分钟内随机延迟后发送起床消息。设为 0 则立即发送。",
     "default": 5
   },
   "enabled_group_ids": {
-    "description": "启用睡眠模式的群组ID列表",
+    "description": "【限制与通知】启用睡眠模式并接收状态消息的群组ID列表",
     "type": "list",
-    "hint": "在此处添加群聊号码。只有列表中的群聊会受到睡眠模式的影响。如果列表为空，则睡眠模式不会在任何群聊中生效（但仍可能影响私聊，取决于下方设置）。",
-    "items": {
-      "type": "string"
-    },
+    "hint": "只有这些群聊会在睡眠期间被限制响应，并且会收到睡觉/起床消息。",
+    "items": { "type": "string" },
     "default": []
   },
   "apply_to_private_chat": {
-      "description": "是否在私聊中也启用睡眠模式",
+      "description": "【限制生效范围】是否在私聊中也启用睡眠模式",
       "type": "bool",
-      "hint": "如果勾选，当插件启用且在睡眠时间段内时，私聊也会受到影响。",
+      "hint": "勾选后，私聊也会在睡眠期间被限制响应。",
       "default": true
   },
   "sleep_message": {
-    "description": "机器人进入睡眠时发送（或记录）的消息",
+    "description": "【状态消息内容】机器人进入睡眠时发送的消息",
     "type": "string",
     "hint": "留空则不发送/记录",
     "default": "晚安啦，我先去睡觉了~ 有事明天再说哦 😴"
   },
   "wake_message": {
-    "description": "机器人起床时发送（或记录）的消息",
+    "description": "【状态消息内容】机器人起床时发送的消息",
     "type": "string",
     "hint": "留空则不发送/记录",
     "default": "我起床啦！新的一天开始了！💪"
   },
   "sleeping_reply": {
-    "description": "机器人在睡眠期间对受影响的会话收到的消息的固定回复",
+    "description": "【睡眠期间回复】机器人在睡眠期间对受影响会话的固定回复",
     "type": "string",
-    "hint": "如果不想回复，可以留空，但仍会阻止LLM和其他插件（在受影响的会话中）。",
+    "hint": "留空则不回复，但仍会阻止LLM等。",
     "default": "我现在正在睡觉 Zzzzz... 有什么事等我醒来再说吧~"
   }
 }
